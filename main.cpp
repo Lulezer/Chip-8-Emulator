@@ -245,7 +245,6 @@ int main()
 
 
 	uint8_t delayTimer = 0;
-	uint16_t soundTimer = 0;
 
     // Keypad keymap
     bool keymap[16] = {
@@ -367,11 +366,6 @@ int main()
             if (delayTimer > 0)
             {
                 delayTimer--;
-            }
-
-            if (soundTimer > 0)
-            {
-                soundTimer--;
             }
 
         }
@@ -728,11 +722,6 @@ int main()
                 break;
             }
 
-            case 0x18:
-            {
-                soundTimer = V[x];
-                break;
-            }
 
             case 0x1E:
             {
